@@ -1,0 +1,9 @@
+Hypertext and Our Collective Destiny
+
+Tim Berners-Lee
+
+Talk at Vannevar Bush symposium, 12 October 1995
+
+... There are some common properties between human systems and networked systems which we are already beginning to appreciate. The internet grew as a decentralized system. Its design was tasked by the US military, a centrally controlled system, but the Internet Protocols, being decentralized, outgrew that space. The Internet has bred in its engineers a respect for decentralized systems which has in some cases led to anarchic political views. Just as IP packets have no single point of control, nor do Internet news groups. A feeling grows in the community that the whole Internet design process should be able to exist on its own account in a vacuum. It is not clear that this model has survived increase of scale, or impact with the commercial world, which happened at the same time. The lessons, though, have been well learned. The web, like IP, grew because it was decentralized. There was no central authority for web sites, so they could grow at will, appearing spontaneously. Bush's vision is of a decentralized academic society, in which no central figure or library is essential to the process...
+
+more at: http://www.w3.org/Talks/9510_Bush/Talk.html
