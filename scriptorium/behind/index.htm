@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/DTD/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Behind the scenes at the Javascriptorium - chronotext.org</title>
+
+<script type="text/javascript" src="../../js/common.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../../css/inner.css"/>
+</head>
+
+<body>
+<div class="CONTAINER">
+<div class="HEADER">chronotext is a growing collection of software experiments exploring the relation between text, space and time</div>
+
+<div class="Nav">
+<a class="Off" href="../../index.htm">home</a><span class="Tab">experiments</span></div>
+<div class="SubNav">
+<a class="On" href="#">behind the scenes at the javascriptorium</a><a class="Off" href="../../ubu/index.htm">ubu/ui</a><a class="Off" href="../../TextNoise/index.htm">textnoise</a><a class="Off" href="../../TextTree/index.htm">text tree</a><a class="Off" href="../../webgl/index.htm">back to web(gl)</a><a class="Off" href="../../chanson/index.htm">lui les hébreux moi pharaon</a><a class="Off" href="../../index.htm">more&hellip;</a></div>
+    
+<div class="CONTENT"><div style="margin-top: -6px; margin-bottom: -6px">
+<div class="Title">Behind the scenes at the javascriptorium</div>
+<div class="Subtitle">procedural surfaces and dimensional text</div>
+
+<p>The <a href="../index.htm">reference work</a> is a 3D, software-generated, real-time animation: 60 times per second, an image is produced by the execution of lines of code employing the computer’s graphic processor.</p>
+
+<p>The visuals are made solely of text, lines and shaded surfaces, as revealed in the 5 mini demos.</p>
+
+<h2>procedural water</h2>
+
+<div class="ImageContainer"><a href="../img/water_1920.png"><img src="../img/water_600.png" width="600" height="338" alt="" title="view high-resolution image" /></a></div>
+
+<p>Water surface is simulated by superimposing a series of sinusoidal waves. While all the wave trains share the same period, each one travels in a different direction, with its own amplitude and wavelength.</p>
+
+<p>This relatively simple technique is used to simulate deep-water waves, with no effect from the ocean floor (e.g. breaking waves) and without interferences (e.g. refraction effects near the coast.)</p>
+
+<h2>procedural desert</h2>
+
+<div class="ImageContainer"><a href="../img/desert_1920.png"><img src="../img/desert_600.png" width="600" height="338" alt="" title="view high-resolution image" /></a></div>
+
+<p>At the base of most procedural terrain generation techniques lies a 2D grid whereon each point is assigned a particular elevation.</p>
+
+<p>In our case, the height-map is generated using <i>Perlin Noise</i>, which produces random yet locally harmonic values. The generated data is then sampled transversally to produce continuous curves that in turn will serve as support for text.</p>
+
+<h2>procedural cliffs</h2>
+
+<div class="ImageContainer"><a href="../img/cliffs_1920.png"><img src="../img/cliffs_600.png" width="600" height="338" alt="" title="view high-resolution image" /></a></div>
+
+<p>As for the desert, the cliffs are generated using <i>Perlin Noise</i>, with various parameters and with the additional effect of <i>posterization</i>.</p>
+
+<p><i>Perlin Noise</i> (originally developed in the early 1980s to generate textures for the movie <i>Tron</i>) is widely used in computer graphics whenever reproducing patterns found in nature (mountains, clouds, smoke, fire, fur&hellip;) is required.</p>
+
+<h2>infinite text-field / fly</h2>
+
+<div class="ImageContainer"><a href="../img/fly_1920.png"><img src="../img/fly_600.png" width="600" height="338" alt="" title="view high-resolution image" /></a></div>
+
+<p>Text is classically laid out in lines forming horizontally-bounded columns. New solutions had to be invented in order to provide the full-coverage of a surface while retaining the text's meaning.</p>
+
+<p>The system used here enables transforming any piece of text into an infinite text-field, readable on both horizontal and vertical axes.</p>
+
+<p>Demonstration of the principle using <i>President Wilson's 14</i> points as textual source&hellip;</p>
+
+<h2>infinite text-field / flow</h2>
+
+<div class="ImageContainer"><a href="../img/flow_1920.png"><img src="../img/flow_600.png" width="600" height="338" alt="" title="view high-resolution image" /></a></div>
+
+<p>Elaborating on the previous example, it is possible to split an infinite text-field into several surfaces positioned in 3D space.</p>
+
+<p>Once the surfaces are defined and the relationship between them is established, it is possible to make the entire infinite text-field flow indefinitely&hellip;</p>
+</div></div>
+
+<div class="SIDEBAR"><div style="margin-top: -6px; margin-bottom: -6px">
+<h2>download</h2>
+<ul>
+<li>&bull; <a href="chronotext_behind_win.zip">Windows XP, 7, 8, 10</a> (1.2MB)<br/>Unzip and run.</li>
+<li>&bull; <a href="chronotext_behind_osx.zip">Mac OSX 10.7+</a> (1.2MB)<br/>Unzip and run.</li>
+</ul>
+
+<h2>requirements</h2>
+<ul>
+<li>&bull; A Mac or PC with decent graphics capabilities.</li>
+</ul>
+
+<h2>troubleshooting</h2>
+<ul>
+<li>&bull; Chrome may warn you that the file <i>is not commonly downloaded and could be dangerous</i> (I invite you to trust me and keep the file anyway.)</li>
+<li>&bull; To uninstall, simply delete all the previously unzipped files.</li>
+</ul>
+
+<h2>keep in touch</h2>
+<ul>
+<li>&bull; Send questions or feedback to <nobr><script>mailer('ariel', 'chronotext.org')</script></nobr></li>
+<li>&bull; Follow <a href="http://twitter.com/arielmalka">@arielmalka</a> on Twitter.</li>
+</ul>
+
+<div class="Separator"></div>
+
+<h2>collect on hicetnunc</h2>
+<ul>
+<li>&bull; <a href="https://hicetnunc.xyz/objkt/26605">OBJKT#26605</a></li>
+<li>&bull; <a href="https://hicetnunc.xyz/objkt/26613">OBJKT#26613</a></li>
+<li>&bull; <a href="https://hicetnunc.xyz/objkt/26619">OBJKT#26619</a></li>
+<li>&bull; <a href="https://hicetnunc.xyz/objkt/28715">OBJKT#28715</a></li>
+<li>&bull; <a href="https://hicetnunc.xyz/objkt/28720">OBJKT#28720</a></li>
+</ul>
+
+<h2>related works</h2>
+<ul>
+<li>&bull; <a href="../index.htm">javascriptorium</a></li>
+<li>&bull; <a href="../../Isaiah/index.htm">sketchbook on the book</a></li>
+</ul>
+
+<div class="Separator"></div>
+
+<div class="ImageContainer"><a href="../index.htm"><img src="../img/details1.png" width="200" height="200" alt="" style="margin-top: -4px" /></a></div>
+<div class="Legend">Water surface, represented by a single spiral-shaped line</div>
+
+<div class="ImageContainer"><a href="../index.htm"><img src="../img/details2.png" width="200" height="200" alt="" /></a></div>
+<div class="Legend">Desert, represented by lines and text</div>
+
+<div class="ImageContainer"><a href="../index.htm"><img src="../img/details3.png" width="200" height="200" alt="" /></a></div>
+<div class="Legend">Cliffs, represented by lines and text</div>
+</div></div>
+
+<div style="clear: both"></div>
+<div class="FOOTER">&copy; 2003-2013 <a href="http://ariel.chronotext.org">ariel malka</a> | <a href="http://chronotext.org">chronotext.org</a></div>
+</div>
+</body>
+</html>

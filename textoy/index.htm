@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/DTD/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Textoy - chronotext.org</title>
+
+<script type="text/javascript" src="../js/common.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/inner.css"/>
+</head>
+
+<body>
+<div class="CONTAINER">
+<div class="HEADER">chronotext is a growing collection of software experiments exploring the relation between text, space and time</div>
+
+<div class="Nav">
+<a class="Off" href="../index.htm">home</a><span class="Tab">experiments</span></div>
+<div class="SubNav">
+<a class="On" href="#">textoy</a><a class="Off" href="../ubu/index.htm">ubu/ui</a><a class="Off" href="../TextNoise/index.htm">textnoise</a><a class="Off" href="../TextTree/index.htm">text tree</a><a class="Off" href="../webgl/index.htm">back to web(gl)</a><a class="Off" href="../Ulysses/index.htm">he liked thick word soup</a><a class="Off" href="../chanson/index.htm">lui les hébreux moi pharaon</a><a class="Off" href="../index.htm">more...</a></div>
+    
+<div class="CONTENT"><div style="margin-top: -6px; margin-bottom: -6px">
+<div class="Title">Textoy</div>
+<div class="Subtitle">physical text interaction, with a zest of sound generation</div>
+
+<p>A few words skewered on a line, producing a half-unbearable, half-hilarious whistle while moving with great inertia under the effect of gravity, or vigorously pushed along by none other than your mouse&hellip;</p>
+<p>Intrigued? Check the links to the right: you're only a few kilobytes away from conducting such an experiment on your own desktop computer.</p>
+<p>In the mobile version (unpublished at this time), your device’s accelerometer is used instead of a fixed downward gravity, and your fingers can interact directly with the words.</p>
+
+<div class="ImageContainer"><a href="img/textoy_full.png"><img src="img/textoy_detail.png" width="600" height="338" alt="" title="view high-resolution image" /></a></div>
+<p>This is the first chronotext experiment featuring interaction with sound, and hopefully not the last. Hence the basic synthesis: a sine-wave pattern associated with each word, with frequency modulated as per the local curvature, and volume affected by velocity...</p>
+
+<p>It's also the first experiment produced using <a href="http://libcinder.org">Cinder</a> and the C++ language. While Java was the previous language of choice, it has become irrelevant for many reasons (not deployable anymore inside the browser; not supported on Apple mobile devices.)</p>
+
+<h2>it all began with sand...</h2>
+
+<p>Behind the scenes, a physics engine developed over the years and code-named <i>Line1D</i> controls the strings of text via <i>Verlet integration</i>.</p>
+<p><i>Line1D</i> was initially developed in 2004 for an applet wherein the text of Borges' <i>Book of Sand</i> flows over a virtual sand dune. In 2009, the system was extended to support mobile devices and finger interaction, as featured in the following video:</p>
+
+<iframe src="http://player.vimeo.com/video/3972849" width="600" height="380" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+<h2>acknowledgments</h2>
+<ul>
+<li>&bull; Thanks to Thomas Jakobsen for his enlightening <a href="http://www.pagines.ma1.upc.edu/~susin/files/AdvancedCharacterPhysics.pdf">Advanced Character Physics</a> (<i>Proceedings, Game Developer's Conference, San Jose, 2001.</i>)</li>
+<li>&bull; Made using the <a href="http://libcinder.org">Cinder</a> framework by The Barbarian Group.</li>
+<li>&bull; <a href="http://www.portaudio.com/">PortAudio</a> was used to handle sound in the Windows version.</li>
+</ul>
+</div></div>
+
+<div class="SIDEBAR"><div style="margin-top: -6px; margin-bottom: -6px">
+<h2>download</h2>
+<ul>
+<li>&bull; <a href="chronotext_textoy_win.zip">Windows XP, Vista, 7, 8, 10</a> (582KB)<br/>Unzip, open the folder and run.</li>
+<li>&bull; <a href="chronotext_textoy_osx.zip">Mac OSX 10.7+</a> (473KB)<br/>Unzip and run.</li>
+</ul>
+
+<h2>requirements</h2>
+<ul>
+<li>&bull; Speakers, turned on.</li>
+</ul>
+
+<h2>troubleshooting</h2>
+<ul>
+<li>&bull; Chrome may warn you that the file <i>is not commonly downloaded and could be dangerous</i> (I invite you to trust me and keep the file anyway.)</li>
+<li>&bull; To uninstall, simply delete all the previously unzipped files.</li>
+</ul>
+
+<h2>keep in touch</h2>
+<ul>
+<li>&bull; Send questions or feedback to <nobr><script>mailer('info', 'chronotext.org')</script></nobr></li>
+<li>&bull; Follow <a href="http://twitter.com/arielmalka">@arielmalka</a> on Twitter.</li>
+</ul>
+
+<div class="Separator"></div>
+
+<h2>related works</h2>
+<ul>
+<li>&bull; <a href="../TextNoise/index.htm">textnoise</a></li>
+<li>&bull; <a href="../iphone/index.htm">chronotext on the iphone</a></li>
+<li>&bull; <a href="../bookOfSand/index.htm">the book of sand</a></li>
+</ul>
+
+<div class="Separator"></div>
+
+<h2>connection</h2>
+<div class="ImageContainer"><a href="https://vimeo.com/5596880"><img src="img/hill - mediations.jpg" width="200" height="200" alt="" /></a></div>
+<div class="Legend">Extract from <a href="https://vimeo.com/5596880">Mediations (towards a remake of Soundings)</a> by Gary Hill, 1979/1986</div>
+</div></div>
+
+<div style="clear: both"></div>
+<div class="FOOTER">&copy; 2003-2013 <a href="http://ariel.chronotext.org">ariel malka</a> | <a href="http://chronotext.org">chronotext.org</a></div>
+</div>
+</body>
+</html>

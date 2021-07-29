@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/DTD/strict.dtd">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>the book of sand - chronotext.org</title>
+
+<link rel="stylesheet" type="text/css" href="../css/inner.css"/>
+</head>
+
+<body>
+<div class="CONTAINER">
+<div class="HEADER">chronotext is a growing collection of software experiments exploring the relation between text, space and time</div>
+
+<div class="Nav">
+<a class="Off" href="../index.htm">home</a><span class="Tab">experiments</span></div>
+<div class="SubNav">
+<a class="On" href="#">the book of sand</a><a class="Off" href="../ubu/index.htm">ubu/ui</a><a class="Off" href="../TextNoise/index.htm">textnoise</a><a class="Off" href="../TextTree/index.htm">text tree</a><a class="Off" href="../webgl/index.htm">back to web(gl)</a><a class="Off" href="../Ulysses/index.htm">he liked thick word soup</a><a class="Off" href="../chanson/index.htm">lui les hébreux moi pharaon</a><a class="Off" href="../index.htm">more...</a></div>
+
+<div class="CONTENT"><div style="margin-top: -6px; margin-bottom: -6px">
+<div class="Title">The book of sand</div>
+
+<p>An alternative way of reading <i>The Book of Sand</i>, a short story by <a href="http://en.wikipedia.org/wiki/Jorge_Luis_Borges">Jorge Luis Borges</a>.</p>
+
+<div style="position: relative">
+<canvas id="canvas" oncontextmenu="event.preventDefault()" width="600" height="600" style="z-index: 0;"></canvas>
+<img id="progress" src="progress_light.gif" width="24" height="24" style="margin-left: -12px; margin-top: -12px; top: 300px; left: 300px; position: absolute; z-index: 1; "/>
+</div>
+
+<p>This program relies on a <i>cellular automata</i> where each <i>cell</i> simulates a grain of sand.</p>
+
+<h2>instructions</h2>
+<ul>
+<li>&bull; Point and press mouse to drop some sand</li>
+<li>&bull; Hold 'shift' key while pressing mouse to remove sand</li>
+</ul>
+
+<h2>hints</h2>
+<ul>
+<li>&bull; If at some point you can't see text anymore: drop some sand near one of the horizontal sides to create a friendly slope that will bring a new line in</li>
+<li>&bull; Press 'x' key to wipe-out all the sand</li>
+</ul>
+
+<h2>acknowledgments</h2>
+<ul>
+<li>&bull; Thanks to Maximus Clarke, for his <a href="http://bookofsand.net/hypertext/">hypertext puzzle</a>.</li>
+<li>&bull; Thanks to Norman Thomas di Giovanni, for his translation to English.</li>
+</ul>
+</div></div>
+
+<div class="SIDEBAR"><div style="margin-top: -6px; margin-bottom: -6px">
+<h2>requirements</h2>
+<ul>
+<li>&bull; Decent computer</li>
+<li>&bull; Modern browser, with limited number of <i>hungry tabs</i></li>
+</ul>
+
+<div class="Separator"></div>
+
+<h2>history</h2>
+<ul>
+<li>&bull; The first iteration of this program was a Java applet created for the Concept.Live/BD4D event #3 that took place in Tel-Aviv in 2004.</li>
+<li>&bull; Later, it served as the base for developing <a href="http://ariel.chronotext.org/mobile-sand/">mobile sand</a>, an innovative game for (pre smartphone) mobiles.</li>
+<li>&bull; At some point, the Java technology became obsolete in the browser.</li>
+<li>&bull; Nowadays, the program has been remastered and runs within the browser.</li>
+</ul>
+
+<h2>collect on hicetnunc</h2>
+<ul>
+<li>&bull; <a href="https://hicetnunc.xyz/objkt/25287">OBJKT#25287</a></li>
+</ul>
+
+<h2>related works</h2>
+<ul>
+<li>&bull; <a href="../Ulysses/index.htm">he liked thick word soup</a></li>
+<li>&bull; <a href="../webgl/index.htm">back to web(gl)</a></li>
+</ul>
+</div></div>
+
+<div style="clear: both"></div>
+<div class="FOOTER">&copy; 2004-2018 <a href="http://ariel.chronotext.org">ariel malka</a> | <a href="http://chronotext.org">chronotext.org</a></div>
+</div>
+
+<script>
+  var Module =
+  {
+    canvas: (function ()
+    {
+      return document.getElementById('canvas');
+    })()
+  };
+</script>
+
+<script>
+  (function() {
+    var memoryInitializer = 'BookOfSand.html.mem';
+    if (typeof Module['locateFile'] === 'function') {
+      memoryInitializer = Module['locateFile'](memoryInitializer);
+    } else if (Module['memoryInitializerPrefixURL']) {
+      memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
+    }
+    var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
+    xhr.open('GET', memoryInitializer, true);
+    xhr.responseType = 'arraybuffer';
+    xhr.send(null);
+  })();
+
+  var script = document.createElement('script');
+  script.src = "BookOfSand.js";
+
+  script.onload = function()
+  {
+    document.getElementById("progress").style.display = 'none';
+  };
+
+  script.onreadystatechange = function()
+  {
+    if (script.readyState == "loaded" || script.readyState == "complete")
+    {
+      script.onreadystatechange = null;
+      document.getElementById("progress").style.display = 'none';
+    }
+  }
+  
+  document.body.appendChild(script);
+</script>
+
+</body>
+</html>

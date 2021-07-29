@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Text Tree - chronotext.org</title>
+
+    <script src="parse.min.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="BackHack.js"></script>
+
+    <script>
+      window.onload = function()
+      {
+        Parse.initialize("StilAs7Bpyriq9mqPXrwdZJW8GCVhVlYByGKLv5p", "5u61zd1ElDUesMvrunSAawsB38m7cFo7axviBrjW");
+        Parse.serverURL = "https://parseapi.back4app.com/";
+
+        if (document.location.search != "")
+        {
+          var Tree = Parse.Object.extend("Tree");
+          var query = new Parse.Query(Tree);
+
+          query.get(document.location.search.substr(1), {
+            success: function(tree) {
+              document.xml = tree.get("xml");
+            },
+            error: function(tree, error) {
+              alert("Loading failed!\n" + error.message);
+            }
+          });
+        }
+
+        backHack();
+      }
+    </script>
+
+    <style>
+      body
+      {
+        margin: 0px;
+        background: #ffffff;
+      }
+
+      #canvas
+      {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      #progress
+      {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left:-12px;
+        margin-top:-12px
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+    <img id="progress" src="progress_light.gif" width="24" height="24" />
+    
+    <script>
+      var Module =
+      {
+        canvas: (function ()
+        {
+          return document.getElementById('canvas');
+        })()
+      };
+    </script>
+
+    <script>
+      (function() {
+        var memoryInitializer = 'https://s3.amazonaws.com/chronotext/TextTree/TextTree.html.mem';
+        if (typeof Module['locateFile'] === 'function') {
+          memoryInitializer = Module['locateFile'](memoryInitializer);
+        } else if (Module['memoryInitializerPrefixURL']) {
+          memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
+        }
+        var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
+        xhr.open('GET', memoryInitializer, true);
+        xhr.responseType = 'arraybuffer';
+        xhr.send(null);
+      })();
+
+      var script = document.createElement('script');
+      script.src = "https://s3.amazonaws.com/chronotext/TextTree/TextTree.js";
+
+      script.onload = function()
+      {
+        document.getElementById("progress").style.display = 'none';
+      };
+
+      script.onreadystatechange = function()
+      {
+        if (script.readyState == "loaded" || script.readyState == "complete")
+        {
+          script.onreadystatechange = null;
+          document.getElementById("progress").style.display = 'none';
+        }
+      }
+      
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+body
+{
+  background-color: #ffffff;
+  color: #000000;
+  margin: 12px;
+  font-family: Arial, sans-serif;
+  word-wrap: break-word;
+  min-width: 825px;
+}
+
+body, td
+{
+  font-size: 12px;
+}
+
+form
+{
+  margin: 0px;
+}
+
+/* ---------- */
+
+div.CONTAINER
+{
+  width: 825px;
+  margin: 0 auto;
+}
+
+div.HEADER
+{
+  font-weight: normal;
+  font-size: 30px;
+  padding-bottom: 12px;
+}
+
+div.CONTENT
+{
+  width: 600px;
+  padding-right: 12px;
+  float: left;
+  border-right: 1px solid #d0d0d0;
+}
+
+div.SIDEBAR
+{
+  margin-left: -1px;
+  padding-left: 12px;
+  border-left: 1px solid #d0d0d0;
+  width: 200px;
+  float: right;
+}
+
+div.FOOTER
+{
+  border-top: 1px solid #d0d0d0;
+  padding: 9px;
+  background-image: url('../img/gradient_up-bot.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  clear: both;
+  margin-top: 12px;
+}
+
+.SIDEBAR h2
+{
+  margin-bottom: -6px;
+}
+
+/* ---------- */
+
+h1, h2, .HEADER, .Title, .Subtitle
+{
+  font-family: Georgia, serif;
+}
+
+h1
+{
+  margin-top: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+h2
+{
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+p
+{
+  line-height: 150%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+a
+{
+  font-weight: bold;
+  color: #a80000;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #000000;
+}
+
+a img
+{
+  border-style: none;
+}
+
+img
+{
+  vertical-align: top;
+  display: block;
+}
+
+/* ---------- */
+
+div.Nav
+{
+  padding: 11px 3px 11px 3px;
+  background-image: url('../img/gradient_bot-up.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+div.Nav a,
+div.SubNav a
+{
+  font-weight: normal;
+  color: #000000;
+  padding: 4px;
+  border: 1px solid;
+  margin: 3px;
+}
+
+div.Nav a.On, div.Nav a.Off:hover,
+div.SubNav a.On, div.SubNav a.Off:hover
+{
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+div.Nav a.Off,
+div.SubNav a.Off
+{
+  background-color: #ffffff;
+  border-color: #d0d0d0;
+}
+
+span.Tab
+{
+  color: #000000;
+  border: 1px solid #d0d0d0;
+  margin: 3px;
+  background-color: #ffffff;
+  padding: 4px 4px 11px 4px;
+  border-bottom-color: #ffffff;
+}
+
+#tab
+{
+  padding-bottom: 11px;
+}
+
+#tab.On,
+#tab.Off:hover
+{
+  border-bottom-color: #000000;
+}
+
+#tab.Off
+{
+  border-bottom-color: #ffffff;
+}
+
+div.SubNav
+{
+  padding: 11px 0px 11px 0px;
+  margin-left: -3px;
+  margin-bottom: 6px;
+}
+
+div.Separator
+{
+  margin-top: 12px;
+  margin-bottom: 12px;
+  height: 1px;
+  overflow: hidden;
+  border-top: 1px solid #d0d0d0;
+}
+
+/* ---------- */
+
+div.Title
+{
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+    
+div.Subtitle
+{
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+    
+div.Legend
+{
+  font-style:italic;
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+div.ImageContainer
+{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* ---------- */
+
+ul
+{
+  margin-left: 0px;
+  padding-left: 9px;
+  text-indent: -7px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+li
+{
+  list-style-image: none;
+  list-style-type: none;
+  margin-bottom: 0px;
+  line-height: 150%;
+}
