@@ -24,7 +24,7 @@
 <p>An alternative way of reading <i>The Book of Sand</i>, a short story by <a href="http://en.wikipedia.org/wiki/Jorge_Luis_Borges">Jorge Luis Borges</a>.</p>
 
 <div style="position: relative">
-<canvas id="canvas" oncontextmenu="event.preventDefault()" width="600" height="600" style="z-index: 0;"></canvas>
+<canvas id="canvas" oncontextmenu="event.preventDefault()" width="600" height="600" tabindex="-1" style="z-index: 0; outline: none;"></canvas>
 <img id="progress" src="progress_light.gif" width="24" height="24" style="margin-left: -12px; margin-top: -12px; top: 300px; left: 300px; position: absolute; z-index: 1; "/>
 </div>
 
@@ -66,11 +66,6 @@
 <li>&bull; Nowadays, the program has been remastered and runs within the browser.</li>
 </ul>
 
-<h2>collect on hicetnunc</h2>
-<ul>
-<li>&bull; <a href="https://hicetnunc.xyz/objkt/25287">OBJKT#25287</a></li>
-</ul>
-
 <h2>related works</h2>
 <ul>
 <li>&bull; <a href="../Ulysses/index.htm">he liked thick word soup</a></li>
@@ -93,38 +88,20 @@
 </script>
 
 <script>
-  (function() {
-    var memoryInitializer = 'BookOfSand.html.mem';
-    if (typeof Module['locateFile'] === 'function') {
-      memoryInitializer = Module['locateFile'](memoryInitializer);
-    } else if (Module['memoryInitializerPrefixURL']) {
-      memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
-    }
-    var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
-    xhr.open('GET', memoryInitializer, true);
-    xhr.responseType = 'arraybuffer';
-    xhr.send(null);
-  })();
-
-  var script = document.createElement('script');
-  script.src = "BookOfSand.js";
-
-  script.onload = function()
+  var Module =
   {
-    document.getElementById("progress").style.display = 'none';
-  };
-
-  script.onreadystatechange = function()
-  {
-    if (script.readyState == "loaded" || script.readyState == "complete")
+    canvas: (function ()
     {
-      script.onreadystatechange = null;
-      document.getElementById("progress").style.display = 'none';
+      return document.getElementById('canvas');
+    })(),
+    onRuntimeInitialized: function()
+    {
+      document.getElementById('progress').style.display = 'none';
+      document.getElementById('canvas').focus();
     }
-  }
-  
-  document.body.appendChild(script);
+  };
 </script>
 
+<script async src="BookOfSand.js"></script>
 </body>
 </html>
