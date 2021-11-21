@@ -7,7 +7,6 @@
 
     <script src="parse.min.js"></script>
     <script src="FileSaver.js"></script>
-    <script src="BackHack.js"></script>
 
     <script>
       window.onload = function()
@@ -29,8 +28,6 @@
             }
           });
         }
-
-        backHack();
       }
     </script>
 
@@ -44,6 +41,7 @@
       #canvas
       {
         display: block;
+        outline: none;
         width: 100vw;
         height: 100vh;
       }
@@ -60,8 +58,7 @@
   </head>
 
   <body>
-    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-
+    <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
     <img id="progress" src="progress_light.gif" width="24" height="24" />
     
     <script>
@@ -70,42 +67,15 @@
         canvas: (function ()
         {
           return document.getElementById('canvas');
-        })()
-      };
-    </script>
-
-    <script>
-      (function() {
-        var memoryInitializer = 'https://s3.amazonaws.com/chronotext/TextTree/TextTree.html.mem';
-        if (typeof Module['locateFile'] === 'function') {
-          memoryInitializer = Module['locateFile'](memoryInitializer);
-        } else if (Module['memoryInitializerPrefixURL']) {
-          memoryInitializer = Module['memoryInitializerPrefixURL'] + memoryInitializer;
-        }
-        var xhr = Module['memoryInitializerRequest'] = new XMLHttpRequest();
-        xhr.open('GET', memoryInitializer, true);
-        xhr.responseType = 'arraybuffer';
-        xhr.send(null);
-      })();
-
-      var script = document.createElement('script');
-      script.src = "https://s3.amazonaws.com/chronotext/TextTree/TextTree.js";
-
-      script.onload = function()
-      {
-        document.getElementById("progress").style.display = 'none';
-      };
-
-      script.onreadystatechange = function()
-      {
-        if (script.readyState == "loaded" || script.readyState == "complete")
+        })(),
+        onRuntimeInitialized: function()
         {
-          script.onreadystatechange = null;
-          document.getElementById("progress").style.display = 'none';
+          document.getElementById('progress').style.display = 'none';
+          document.getElementById('canvas').focus();
         }
-      }
-      
-      document.body.appendChild(script);
+      };
     </script>
+
+    <script async src="TextTree.js"></script>
   </body>
 </html>
